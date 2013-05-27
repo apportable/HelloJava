@@ -1,0 +1,149 @@
+{
+    "xcode_project": "HelloJava.xcodeproj", 
+    "pchs": [
+        "./HelloJava/HelloJava-Prefix.pch"
+    ], 
+    "assets": [
+        {
+            "asset": "HelloJava/Default-568h@2x.png", 
+            "target": "Default-568h@2x.png"
+        }, 
+        {
+            "asset": "HelloJava/Default.png", 
+            "target": "Default.png"
+        }, 
+        {
+            "asset": "HelloJava/Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "HelloJava/en.lproj/InfoPlist.strings", 
+            "target": "en.lproj/InfoPlist.strings"
+        }
+    ], 
+    "config": {
+        "FEATURES": [
+            "opengles2", 
+            "portrait"
+        ], 
+        "SHORT_VERSION": "1.0", 
+        "APPLICATION_NAME": "HelloJava", 
+        "LONG_VERSION": "1.0", 
+        "APPLICATION_IDENTIFIER": "com.apportable.HelloJava", 
+        "TEMPLATE_VALUES": {
+            "PRODUCT_NAME": "HelloJava", 
+            "EXECUTABLE_NAME": "HelloJava"
+        }, 
+        "APPLICATION_FULL_NAME": "HelloJava"
+    }, 
+    "header_paths": [
+        {
+            "header_path": "HelloJava-generated-files.hmap", 
+            "type": "iquote", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "HelloJava-own-target-headers.hmap", 
+            "type": "I", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "HelloJava-all-target-headers.hmap", 
+            "type": "I", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "HelloJava-project-headers.hmap", 
+            "type": "iquote", 
+            "hmap": {
+                "HelloJavaAppDelegate.h": {
+                    "prefix": "HelloJava/", 
+                    "suffix": "HelloJavaAppDelegate.h", 
+                    "key": "HelloJavaAppDelegate.h"
+                }, 
+                "HelloJava-Prefix.pch": {
+                    "prefix": "HelloJava/", 
+                    "suffix": "HelloJava-Prefix.pch", 
+                    "key": "HelloJava-Prefix.pch"
+                }
+            }
+        }
+    ], 
+    "modules": [], 
+    "sources": [
+        {
+            "source": "HelloJava/HelloBridge.m", 
+            "language": "objc"
+        }, 
+        {
+            "source": "HelloJava/main.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "HelloJava/HelloJavaAppDelegate.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }
+    ], 
+    "version": "1", 
+    "flags": [
+        "-DNS_BLOCK_ASSERTIONS=1", 
+        "-fwritable-strings", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wuninitialized", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }
+    ], 
+    "infoplists": [
+        "./HelloJava/HelloJava-Info.plist"
+    ], 
+    "deps": [
+        "UIKit", 
+        "UIKit", 
+        "Foundation", 
+        "CoreGraphics"
+    ], 
+    "java_sourcepaths": [
+        "java/src"
+    ], 
+    "java_sources": [
+        "java/src/com/apportable/demo/HelloBridge.java"
+    ], 
+    "type": "app", 
+    "defines": {
+        "IBOutletCollection(ClassName)": "__attribute__((iboutletcollection(ClassName)))", 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 60000, 
+        "IBAction": "void)__attribute__((ibaction)", 
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "IBOutlet": "__attribute__((iboutlet))"
+    }
+}

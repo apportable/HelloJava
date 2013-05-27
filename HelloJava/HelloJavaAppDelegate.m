@@ -7,6 +7,9 @@
 //
 
 #import "HelloJavaAppDelegate.h"
+#ifdef ANDROID
+#import "HelloBridge.h"
+#endif
 
 @implementation HelloJavaAppDelegate
 
@@ -18,6 +21,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifdef APPORTABLE
+    HelloBridge *bridgeObject = [[HelloBridge alloc] initWithIntValue:42 doubleValue:55.4];
+    [bridgeObject setIntValue:99];
+    [bridgeObject setDoubleValue:11.44];
+    NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f",
+                                                  bridgeObject.intValue, [bridgeObject intValue]];
+#else
+    NSString *result = @"Hello iOS!";
+#endif
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"BridgeKitDemo"
+                                                    message:result
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
