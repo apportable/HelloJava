@@ -26,7 +26,7 @@
     [bridgeObject setIntValue:99];
     [bridgeObject setDoubleValue:11.44];
     NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f",
-                                                  bridgeObject.intValue, [bridgeObject intValue]];
+                                                  bridgeObject.intValue, [bridgeObject doubleValue]];
 #else
     NSString *result = @"Hello iOS!";
 #endif
