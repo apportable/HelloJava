@@ -1,5 +1,11 @@
 {
     "xcode_project": "HelloJava.xcodeproj", 
+    "java_sources": [
+        {
+            "source": "java/src/com/apportable/demo/HelloBridge.java", 
+            "language": "unknown"
+        }
+    ], 
     "pchs": [
         "./HelloJava/HelloJava-Prefix.pch"
     ], 
@@ -21,6 +27,7 @@
             "target": "en.lproj/InfoPlist.strings"
         }
     ], 
+    "link_flags": [], 
     "config": {
         "FEATURES": [
             "opengles2", 
@@ -132,13 +139,13 @@
         "Foundation", 
         "CoreGraphics"
     ], 
+    "libs": [], 
     "java_sourcepaths": [
         "java/src"
     ], 
-    "java_sources": [
-        "java/src/com/apportable/demo/HelloBridge.java"
-    ], 
+    "java_res_dirs": [], 
     "type": "app", 
+    "java_libs": [], 
     "defines": {
         "IBOutletCollection(ClassName)": "__attribute__((iboutletcollection(ClassName)))", 
         "__IPHONE_OS_VERSION_MIN_REQUIRED": 60000, 
