@@ -140,6 +140,7 @@
     // {"source": "./PngImageLoader.m", "flags": ["-fstack-protector"], "defines": {"PNG": 1}, "env": {"TARGET_TEXTURE_FMT": "png"}}
     "sources": [
         "HelloJava/HelloBridge.m",
+        "HelloJava/MyBridgeObject.m",
     ],
     // A list of glob inclusion filters for additional files.
     // This can also be used to replace flags on multiple files.
@@ -158,6 +159,7 @@
     "infoplists": [],
     "java_sources": [
         "java/src/com/apportable/demo/HelloBridge.java",
+        "java/src/com/apportable/demo/MyBridgeObject.java",
     ],
     "java_sourcepaths": [
         "java/src",
