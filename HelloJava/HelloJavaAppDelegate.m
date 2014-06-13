@@ -25,7 +25,7 @@
     HelloBridge *bridgeObject = [[HelloBridge alloc] initWithIntValue:42 doubleValue:55.4];
     [bridgeObject setIntValue:99];
     [bridgeObject setDoubleValue:11.44];
-    NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f\nList: %d",
+    NSString *result = [NSString stringWithFormat:@"Hello Android: %d, %f\nList has %d items",
                                                   bridgeObject.intValue, [bridgeObject doubleValue],
                                                   [bridgeObject.listValue toArray].count];
 #else
