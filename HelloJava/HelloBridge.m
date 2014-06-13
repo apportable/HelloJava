@@ -34,6 +34,10 @@
                                selector:@selector(setDoubleValue:)
                             arguments:[JavaClass doublePrimitive], nil];
 
+    [HelloBridge registerInstanceMethod:@"getListValue"
+                               selector:@selector(listValue)
+                            returnValue:[JavaList className]];
+
 
     [HelloBridge registerCallback:@"bridgeCallback"
                          selector:@selector(valueChanged:doubleValue:)
