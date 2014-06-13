@@ -1,4 +1,5 @@
 #import "HelloBridge.h"
+#import "MyBridgeObject.h"
 
 @implementation HelloBridge
 
@@ -11,6 +12,8 @@
     // Note: this must be called for any class that registers custom 
     // java apis, without this call the inheritance may not work as expected
     [super initializeJava]; 
+
+    [MyBridgeObject initializeJava];
 
     // Bridge registration methods must be called on the class and NOT self
     // even though that this is a static method (this preserves inheritance
@@ -36,7 +39,8 @@
 
     [HelloBridge registerInstanceMethod:@"getListValue"
                                selector:@selector(listValue)
-                            returnValue:[JavaList className]];
+                            returnValue:[JavaList className]
+                              arguments:nil];
 
 
     [HelloBridge registerCallback:@"bridgeCallback"

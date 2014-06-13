@@ -11,7 +11,7 @@
     // Bridge registration methods must be called on the class and NOT self
     // even though that this is a static method (this preserves inheritance
     // to the correct java class
-    [MyBridgeObject registerConstructorWithSelector:@selector(init:)
+    [MyBridgeObject registerConstructorWithSelector:@selector(init)
                                        arguments:nil];
 }
 
