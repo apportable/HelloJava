@@ -16,29 +16,29 @@
     // even though that this is a static method (this preserves inheritance
     // to the correct java class
     [HelloBridge registerConstructorWithSelector:@selector(initWithIntValue:doubleValue:)
-                                       arguments:[JavaClass intPrimitive], [JavaClass doublePrimitive], nil];
+                                       arguments:[BK2JavaObject intPrimitive], [BK2JavaObject doublePrimitive], nil];
     
     [HelloBridge registerInstanceMethod:@"getIntValue"
                                selector:@selector(intValue)
-                            returnValue:[JavaClass intPrimitive]];
+                            returnValue:[BK2JavaObject intPrimitive]];
 
     [HelloBridge registerInstanceMethod:@"setIntValue"
                                selector:@selector(setIntValue:)
-                            arguments:[JavaClass intPrimitive], nil];
+                            arguments:[BK2JavaObject intPrimitive], nil];
 
     [HelloBridge registerInstanceMethod:@"getDoubleValue"
                                selector:@selector(doubleValue)
-                            returnValue:[JavaClass doublePrimitive]];
+                            returnValue:[BK2JavaObject doublePrimitive]];
 
     [HelloBridge registerInstanceMethod:@"setDoubleValue"
                                selector:@selector(setDoubleValue:)
-                            arguments:[JavaClass doublePrimitive], nil];
+                            arguments:[BK2JavaObject doublePrimitive], nil];
 
 
     [HelloBridge registerCallback:@"bridgeCallback"
                          selector:@selector(valueChanged:doubleValue:)
                       returnValue:nil
-                        arguments:[JavaClass intPrimitive], [JavaClass doublePrimitive], nil];
+                        arguments:[BK2JavaObject intPrimitive], [BK2JavaObject doublePrimitive], nil];
 }
 
 + (NSString *)className
